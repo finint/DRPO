@@ -1,0 +1,1 @@
+torchrun train_script.py --nproc_per_node 8 > train.log 2>&1

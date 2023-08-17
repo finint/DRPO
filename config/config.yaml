@@ -1,0 +1,24 @@
+batch_size: 512
+bias: true
+hmax: 100   
+buy_cost_pct: 6.87e-05
+data_path: ./data/SSE50_sample.npz
+dropout_rate: 0.2
+feature_size: 49   # stock_num * feature_num 
+gamma: 1
+head_mask: 10
+hidden_size: 50
+learning_rate: 0.001
+lstm_layers: 3
+model_path: ./saved_models
+reward_scaling: 1000
+sell_cost_pct: 0.0010687
+sequence_length: 140
+stock_num: 30    # 30 for DOW30 3 for COIN
+tail_mask: 130
+tb_path: ./tb_results/
+total_money: 100
+model_save_interval: 5
+use_difficulty: True   # Whether to use difficulty (Good for training)
+total_steps: 10       # In these steps difficulty are changing gradually from 0 to 1
+epochs_per_step: 10    # epochs in each step
