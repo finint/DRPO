@@ -4,7 +4,7 @@ hmax: 100
 buy_cost_pct: 6.87e-05
 data_path: ./data/SSE50_sample.npz
 dropout_rate: 0.2
-feature_size: 49   # stock_num * feature_num 
+feature_size: 49   # feature_num 
 gamma: 1
 head_mask: 10
 hidden_size: 50
