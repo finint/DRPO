@@ -12,7 +12,7 @@
   bias: true                 # whether to use bias 
   hmax: 100                  # scaling actions, which is good for training. Only used in 'multiple' model type now 
   buy_cost_pct: 6.87e-05     # may change according to your market
-  data_path: ./data/SSE50_sample.npz  # your training data path. shape:(batchsize, sequence_length, stock_num, feature_num)
+  data_path: ./data/SSE50_sample.npz  # your training data path. shape: (batchsize, sequence_length, stock_num, feature_num)
   dropout_rate: 0.25         # drpoout rate of the whole network
   feature_size: 1470         # feature_num   49 for SSE50, 6 for DOW30, 43 for COIN
   gamma: 1                   # gamma
@@ -33,3 +33,22 @@
   total_steps: 100           # In these steps difficulty are changing gradually from 0 to 1
   epochs_per_step: 10        # epochs in each step
   ```
+
+* Install required packages
+
+  ``` shell
+  pip install -r requirements.txt  # requirements_full.txt for specific versions
+  ```
+
+* Training (Single)
+
+  ``` shell
+  sh train.sh
+  ```
+
+* Training (Parallel)
+
+  ``` shell
+  sh train_parallel.sh
+  ```
+
