@@ -1,4 +1,4 @@
-# Efficient Continuous Space Policy Optimization for High-frequency Trading
+# Efficient Continuous Space Policy Optimization for High-frequency Trading (DRPO)
 ## 1. Prepare you training data
 
 * The input of our model are using a .npz file which contains `input_data, buy_price, sell_price` and `date_list` by default. Of course, you may use the data format you wish by changing the `_load_data` function of the `DRPOTrainer` class in `./trainer/drpo_trainer.py`. But to make sure that the `input_date`'s shape must be `(batchsize, sequence_length, stock_num, feature_num)` and the `buy_price`'s and `sell_price`'s shape must be `(batchsize, sequence_length, stock_num)` accordingly. `Date_list` is not necessarily needed in training.
@@ -54,7 +54,7 @@
 
 ## 3. Citing
 
-* If you find this papaer is useful for your research, please consider citing the following papers:
+* If you find **DRPO** is useful for your research, please consider citing the following papers:
 
   ``` latex
   @inproceedings{han2023efficient,
