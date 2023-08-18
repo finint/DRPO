@@ -1,9 +1,9 @@
-# Deep Reinforcement Learning for Portfolio Optimization via High-frequency Trading (DRPO)
-## 1. prepare you training data
+# Efficient Continuous Space Policy Optimization for High-frequency Trading
+## 1. Prepare you training data
 
 * The input of our model are using a .npz file which contains `input_data, buy_price, sell_price` and `date_list` by default. Of course, you may use the data format you wish by changing the `_load_data` function of the `DRPOTrainer` class in `./trainer/drpo_trainer.py`. But to make sure that the `input_date`'s shape must be `(batchsize, sequence_length, stock_num, feature_num)` and the `buy_price`'s and `sell_price`'s shape must be `(batchsize, sequence_length, stock_num)` accordingly. `Date_list` is not necessarily needed in training.
 
-## 2. train you model
+## 2. Train you model
 
 * Before training, make sure to change the parameters in `./config/config.yaml`
 
@@ -40,7 +40,7 @@
   pip install -r requirements.txt  # requirements_full.txt for specific versions
   ```
 
-* Training (Single)
+* Training (Single GPU)
 
   ``` shell
   sh train.sh
@@ -50,5 +50,19 @@
 
   ``` shell
   sh train_parallel.sh
+  ```
+
+## 3. Citing
+
+* If you find this papaer is useful for your research, please consider citing the following papers:
+
+  ``` latex
+  @inproceedings{han2023efficient,
+      title={Efficient Continuous Space Policy Optimization for High-frequency Trading},
+      author={Han, Li and Ding, Nan and Wang, Guoxuan and Cheng, Dawei and Liang, Yuqi},
+      booktitle={Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+      pages={4112--4122},
+      year={2023}
+    }
   ```
 
